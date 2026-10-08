@@ -153,3 +153,26 @@ address { font-style: normal; font-size: 1.25rem; margin-bottom: 12px; }
   .offer-grid { grid-template-columns: 1fr; }
   .tile figcaption { font-size: .75rem; left: 8px; bottom: 8px; }
 }
+
+/* Hours strip */
+.hours-strip {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 32px;
+  padding: 16px; background: var(--clay); color: #fff; font-size: .95rem;
+}
+.hours-strip a { color: #fff; font-weight: 600; }
+
+/* Parties */
+.parties .section-head { max-width: 760px; margin: 0; }
+.parties .btn { margin-top: 8px; overflow-wrap: anywhere; }
+
+/* Hours list */
+.hours { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; margin: 0 0 12px; }
+.hours dt { font-weight: 600; }
+.hours dd { margin: 0; }
+
+/* FAQ */
+.faq { max-width: 800px; }
+.faq details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+.faq summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; }
+.faq details p { margin: 10px 0 0; color: var(--ink-soft); }
+.phone { color: var(--ink); font-weight: 600; font-size: 1.1rem; }
