@@ -3,203 +3,284 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Depressed Ceramicist · Slipcast pottery in Sedalia, MO</title>
-  <meta name="description" content="The Depressed Ceramicist at The Art Room: handmade slipcast ceramics and paint-your-own pottery at 304 West Main, Sedalia, Missouri. Walk-ins welcome.">
+  <title>The Depressed Ceramicist · Slipcast pottery at The Art Room, Sedalia MO</title>
+  <meta name="description" content="The Depressed Ceramicist at The Art Room: handmade slipcast ceramics, paint-your-own pottery and arty parties at 304 West Main, Sedalia, Missouri. Walk-ins welcome.">
+  <meta name="theme-color" content="#161413">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="The Depressed Ceramicist">
-  <meta property="og:description" content="I'm India! I love slipcasting AND I'm depressed. Studio on West Main in Sedalia, MO.">
+  <meta property="og:description" content="I'm India! I love slipcasting AND I'm depressed. Come paint with me at The Art Room, 304 W Main, Sedalia MO.">
   <meta property="og:url" content="https://thedepressedceramicist.com">
+  <meta property="og:image" content="https://thedepressedceramicist.com/images/india.jpg">
   <link rel="icon" href="images/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-  <header class="nav">
-    <a class="brand" href="#top">
-      <img src="images/logo.svg" alt="" width="40" height="40">
-      <span>The Depressed Ceramicist</span>
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="The Depressed Ceramicist, home">
+      <img src="images/logo.svg" alt="" width="42" height="42">
+      <span>The Depressed<br>Ceramicist</span>
     </a>
-    <nav>
-      <a href="#work">Work</a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#work">The work</a>
+      <a href="#india">Meet India</a>
+      <a href="#artroom">The Art Room</a>
       <a href="#parties">Parties</a>
-      <a href="#about">About</a>
       <a href="#visit">Visit</a>
-      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="tel:+16608512392">(660) 851-2392</a>
     </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
+    </button>
   </header>
 
   <main id="top">
 
+    <!-- Hero -->
     <section class="hero">
-      <div class="rain" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <img class="hero-logo" src="images/logo.svg" alt="The Depressed Ceramicist logo: a rain cloud" width="160" height="160">
-        <p class="eyebrow">Slipcast ceramics · Sedalia, Missouri</p>
-        <h1>Handmade pottery,<br>made on the cloudy days too.</h1>
-        <p class="lede">I'm India! I love slipcasting AND I'm depressed. Come paint with me at The Art Room on West Main. No appointment needed.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="#visit">Visit the studio</a>
-          <a class="btn ghost" href="https://www.instagram.com/thedepressedceramicist/" target="_blank" rel="noopener">See new work on Instagram</a>
+      <canvas class="rain-canvas" id="rain" aria-hidden="true"></canvas>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="open-badge" id="openBadge" data-hero>
+            <span class="dot"></span><span class="open-text">Fri–Sat 12–6 · Sun 1–5</span>
+          </div>
+          <h1 class="hero-title" data-hero>
+            <span class="line"><span>Handmade pottery,</span></span>
+            <span class="line"><span>made on the</span></span>
+            <span class="line"><span><em>cloudy</em> days too.</span></span>
+          </h1>
+          <p class="hero-lede" data-hero>I'm India! I love slipcasting <strong>AND</strong> I'm depressed. Come paint with me at The Art Room on West Main in Sedalia. No appointment needed.</p>
+          <div class="hero-ctas" data-hero>
+            <a class="btn btn-clay magnetic" href="#visit">Visit the studio <span aria-hidden="true">→</span></a>
+            <a class="btn btn-line magnetic" href="#work">See the work</a>
+          </div>
+        </div>
+
+        <div class="hero-art" id="heroArt" aria-hidden="true">
+          <div class="spin-badge">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+              <text textLength="486" lengthAdjust="spacing"><textPath href="#circle" textLength="486" lengthAdjust="spacing">THE DEPRESSED CERAMICIST ✺ SEDALIA MO ✺</textPath></text>
+            </svg>
+            <img src="images/logo.svg" alt="">
+          </div>
+          <figure class="float-card card-india" data-depth="0.6"><img src="images/india.jpg" alt=""></figure>
+          <figure class="float-card card-stein-a" data-depth="1.2"><img src="images/stein-sun.jpg" alt=""></figure>
+          <figure class="float-card card-stein-b" data-depth="0.9"><img src="images/stein-painted.jpg" alt=""></figure>
+          <span class="scribble" data-depth="1.5">slipcast by hand!</span>
         </div>
       </div>
+      <a class="scroll-hint" href="#work" aria-label="Scroll down"><span></span></a>
     </section>
 
-    <div class="hours-strip">
-      <div><strong>Fri–Sat</strong> 12–6 pm</div>
-      <div><strong>Sun</strong> 1–5 pm</div>
-      <div><strong>Wed–Thu</strong> by appointment</div>
-      <a href="tel:+16608512392">(660) 851-2392</a>
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Slipcast by hand</span><i>✺</i><span>Paint your own pottery</span><i>✺</i><span>Arty parties</span><i>✺</i><span>Astrology steins</span><i>✺</i><span>304 W Main, Sedalia</span><i>✺</i>
+        <span>Slipcast by hand</span><i>✺</i><span>Paint your own pottery</span><i>✺</i><span>Arty parties</span><i>✺</i><span>Astrology steins</span><i>✺</i><span>304 W Main, Sedalia</span><i>✺</i>
+      </div>
     </div>
 
-    <section id="work" class="section">
-      <div class="section-head">
-        <p class="eyebrow">The work</p>
-        <h2>Out of the mold</h2>
-        <p>Everything is slipcast by hand in the studio: liquid clay poured into plaster molds, then trimmed, fired and glazed one piece at a time.</p>
-      </div>
+    <!-- Stats -->
+    <section class="stats">
+      <div class="stat" data-reveal><strong><span data-count="402">402</span>K</strong><span>people following on Facebook</span></div>
+      <div class="stat" data-reveal><strong><span data-count="2020" data-plain>2020</span></strong><span>the year The Art Room opened</span></div>
+      <div class="stat" data-reveal><strong>$<span data-count="5">5</span></strong><span>where pieces start</span></div>
+      <div class="stat" data-reveal><strong><span data-count="5">5</span> days</strong><span>a week, open to walk-ins and bookings</span></div>
+    </section>
 
-      <div class="gallery">
-        <!-- To add a photo: save it as images/piece-1.jpg (piece-2.jpg, ...) and edit the caption below. -->
-        <figure class="tile">
-          <img src="images/piece-1.jpg" alt="Astrology stein" loading="lazy" onerror="this.remove()">
-          <figcaption>Astrology steins</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="images/piece-2.jpg" alt="Bisque piece ready to paint" loading="lazy" onerror="this.remove()">
-          <figcaption>Bisque, ready to paint</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="images/piece-3.jpg" alt="Slipcast mug" loading="lazy" onerror="this.remove()">
-          <figcaption>Mugs</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="images/piece-4.jpg" alt="Slipcast piece" loading="lazy" onerror="this.remove()">
-          <figcaption>Odd little guys</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="images/piece-5.jpg" alt="Studio shelves" loading="lazy" onerror="this.remove()">
-          <figcaption>Fresh from the kiln</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="images/piece-6.jpg" alt="Studio at work" loading="lazy" onerror="this.remove()">
-          <figcaption>In the studio</figcaption>
-        </figure>
+    <!-- Work -->
+    <section class="work" id="work">
+      <div class="work-sticky">
+        <p class="eyebrow" data-reveal>The work</p>
+        <h2 data-reveal>Out of the mold.</h2>
+        <p data-reveal>Everything is slipcast in the studio. Liquid clay goes into plaster molds, and each piece is trimmed, fired and glazed one at a time. The astrology steins are a favorite: a stein for every sign, sold finished or in bisque so you can paint your own.</p>
+        <ol class="steps">
+          <li data-reveal><b>01</b><span><strong>Pour</strong> liquid slip into a plaster mold.</span></li>
+          <li data-reveal><b>02</b><span><strong>Wait</strong> while the plaster pulls water and a clay wall forms.</span></li>
+          <li data-reveal><b>03</b><span><strong>Release</strong> the piece, then trim and clean every seam.</span></li>
+          <li data-reveal><b>04</b><span><strong>Fire &amp; glaze</strong>, or keep it in bisque for you to paint.</span></li>
+        </ol>
       </div>
-
-      <div class="offer-grid">
-        <article class="offer">
-          <h3>Paint your own pottery</h3>
-          <p>Walk in any time during open hours, pick a piece and paint. Pieces start at $5, with the most to choose from in the $15–25 range.</p>
-        </article>
-        <article class="offer">
-          <h3>Classes</h3>
-          <p>Regular classes at the studio. Call or message on Facebook to find out what's coming up.</p>
-        </article>
-        <article class="offer">
-          <h3>Bisque to take home</h3>
-          <p>Slipcast pieces, astrology steins included, are available in bisque so you can paint them your way. Send a photo of the finished piece!</p>
-        </article>
+      <div class="work-stack">
+        <figure class="work-img tall" data-reveal="img">
+          <img src="images/stein-sun.jpg" alt="Teal glazed slipcast stein with a sun face and star lid" loading="lazy" data-parallax="-8">
+          <figcaption>Astrology stein, glazed teal</figcaption>
+        </figure>
+        <figure class="work-img" data-reveal="img">
+          <img src="images/stein-painted.jpg" alt="Hand-painted astrology stein with a Sagittarius design and gold star lid" loading="lazy" data-parallax="-6">
+          <figcaption>Customer-painted bisque</figcaption>
+        </figure>
+        <figure class="work-img wide" data-reveal="img">
+          <img src="images/studio-molds.jpg" alt="The mold room: shelves of plaster molds along a brick wall" loading="lazy" data-parallax="-6">
+          <figcaption>The mold room</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section id="parties" class="section parties">
-      <div class="section-head">
-        <p class="eyebrow">Gatherings</p>
-        <h2>Why have "bored" meetings when you can have arty parties?</h2>
-        <p>Birthday parties, bridal showers, team building, field trips and girls' nights. Tell us your vision and we'll handle the rest, from decorations to party food. Best part: no clean-up for you.</p>
-        <p class="muted">Evening and weekend times are available for private parties and special events.</p>
-        <a class="btn primary" href="mailto:events@artroomusa.com?subject=Party%20booking">Plan a party: events@artroomusa.com</a>
+    <!-- India -->
+    <section class="india" id="india">
+      <div class="india-photo" data-reveal="img">
+        <img src="images/india.jpg" alt="India McCullough in her studio in front of shelves of molds" loading="lazy">
+        <span class="sticker">hi, I'm India ☁︎</span>
       </div>
-    </section>
-
-    <section id="about" class="section about">
-      <div class="about-photo">
-        <img src="images/india.jpg" alt="India in the studio" loading="lazy" onerror="this.remove()">
-        <span aria-hidden="true">☁︎</span>
-      </div>
-      <div>
-        <p class="eyebrow">About</p>
-        <h2>Hi, I'm India.</h2>
-        <p>I'm India McCullough, owner of The Art Room, the arts and crafts studio at 304 West Main Street in Sedalia. It opened in 2020 with monthly classes and has grown into a studio that's open five days a week.</p>
-        <p>The Depressed Ceramicist is where I share my slipcasting: pouring liquid clay into molds, opening them up, and showing what comes out, along with some honest talk about mental health. Come by and see the pieces in person.</p>
-        <p class="muted">Have ceramic slip molds you don't need anymore? I'm always interested in buying them.</p>
-      </div>
-    </section>
-
-    <section id="visit" class="section visit">
-      <div class="section-head">
-        <p class="eyebrow">Visit</p>
-        <h2>Come say hi</h2>
-      </div>
-      <div class="visit-grid">
-        <div class="visit-card">
-          <h3>The Art Room</h3>
-          <address>
-            304 West Main Street<br>
-            Sedalia, MO 65301
-          </address>
-          <dl class="hours">
-            <dt>Wednesday–Thursday</dt><dd>By appointment</dd>
-            <dt>Friday–Saturday</dt><dd>12–6 pm</dd>
-            <dt>Sunday</dt><dd>1–5 pm</dd>
-          </dl>
-          <p class="muted">No appointment needed to paint during open hours. Classes and events are non-refundable, so please book only if you can make it.</p>
-          <a class="btn primary" href="https://maps.google.com/?q=304+West+Main+Street,+Sedalia,+MO+65301" target="_blank" rel="noopener">Get directions</a>
+      <div class="india-copy">
+        <p class="eyebrow" data-reveal>Meet the ceramicist</p>
+        <blockquote data-reveal>"I love slipcasting <em>AND</em> I'm depressed."</blockquote>
+        <p data-reveal>India McCullough owns The Art Room, the arts and crafts studio at 304 West Main Street in Sedalia. It opened in 2020 with monthly classes and has grown into a studio that's open five days a week.</p>
+        <p data-reveal>As The Depressed Ceramicist, India shares slipcasting with hundreds of thousands of followers: pouring molds, opening them up and showing what comes out, along with some honest talk about mental health.</p>
+        <div class="india-links" data-reveal>
+          <a class="pill" href="https://www.facebook.com/p/The-Depressed-Ceramicist-100092476583551/" target="_blank" rel="noopener">Facebook</a>
+          <a class="pill" href="https://www.instagram.com/thedepressedceramicist/" target="_blank" rel="noopener">Instagram</a>
+          <a class="pill" href="https://linktr.ee/thedepressedceramicist" target="_blank" rel="noopener">All links</a>
         </div>
-        <iframe class="map" title="Map to 304 West Main Street, Sedalia, MO"
+      </div>
+    </section>
+
+    <!-- Art Room -->
+    <section class="artroom" id="artroom">
+      <div class="artroom-head">
+        <img class="artroom-logo" src="images/artroom-logo.png" alt="The Art Room logo" width="220" loading="lazy" data-reveal>
+        <div>
+          <p class="eyebrow" data-reveal>The studio</p>
+          <h2 data-reveal>Your hometown art studio, right in the heart of Missouri.</h2>
+        </div>
+      </div>
+
+      <div class="offers">
+        <article class="offer tilt" data-reveal>
+          <span class="offer-icon">🎨</span>
+          <h3>Paint your own pottery</h3>
+          <p>Walk in any time during open hours, pick a piece and paint. Pieces start at $5, and most of the selection is $15–25.</p>
+        </article>
+        <article class="offer tilt" data-reveal>
+          <span class="offer-icon">✏️</span>
+          <h3>Classes</h3>
+          <p>Classes run regularly. Call or message on Facebook to find out what's coming up.</p>
+        </article>
+        <article class="offer tilt" data-reveal>
+          <span class="offer-icon">🏺</span>
+          <h3>Bisque to take home</h3>
+          <p>Slipcast pieces, steins included, come in bisque so you can paint them your way.</p>
+        </article>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <a class="g-item" href="images/party-kids.jpg" data-caption="Birthday party painting at The Art Room" data-reveal="img"><img src="images/party-kids.jpg" alt="Kids painting pottery at a birthday party" loading="lazy"></a>
+        <a class="g-item tall" href="images/spin-art.jpg" data-caption="Spin art station" data-reveal="img"><img src="images/spin-art.jpg" alt="A girl making spin art" loading="lazy"></a>
+        <a class="g-item" href="images/mosaic-night.jpg" data-caption="Mosaic night with friends" data-reveal="img"><img src="images/mosaic-night.jpg" alt="A group of women showing their finished mosaics" loading="lazy"></a>
+        <a class="g-item tall" href="images/wreath-bright.jpg" data-caption="Custom mesh wreath" data-reveal="img"><img src="images/wreath-bright.jpg" alt="A bright yellow and green mesh wreath" loading="lazy"></a>
+        <a class="g-item tall" href="images/wreath-flag.jpg" data-caption="Fourth of July wreath" data-reveal="img"><img src="images/wreath-flag.jpg" alt="A red, white and blue star wreath" loading="lazy"></a>
+        <a class="g-item tall" href="images/wreath-green.jpg" data-caption="Wreath class creation" data-reveal="img"><img src="images/wreath-green.jpg" alt="A customer holding a green wreath they made" loading="lazy"></a>
+        <a class="g-item wide" href="images/mural.jpg" data-caption="The Art Room mural on West Main by Linda Hoover" data-reveal="img"><img src="images/mural.jpg" alt="The Art Room mural on the side of 304 W Main" loading="lazy"></a>
+      </div>
+    </section>
+
+    <!-- Parties -->
+    <section class="parties" id="parties">
+      <div class="parties-inner">
+        <p class="eyebrow" data-reveal>Gatherings</p>
+        <h2 class="big" data-reveal>Why have <s>bored</s> meetings when you can have <em>arty parties?</em></h2>
+        <div class="party-tags" data-reveal>
+          <span>Birthday parties</span><span>Bridal showers</span><span>Team building</span><span>Field trips</span><span>Girls' nights</span>
+        </div>
+        <p class="parties-lede" data-reveal>Tell us your vision and we'll do the rest, from decorations to party food. Best part: <strong>no clean-up for you.</strong> Evening and weekend times are available for private parties and special events.</p>
+        <a class="btn btn-pink magnetic" href="mailto:events@artroomusa.com?subject=Party%20booking" data-reveal>Plan a party: events@artroomusa.com</a>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="visit" id="visit">
+      <div class="visit-bg" aria-hidden="true"><img src="images/mural.jpg" alt="" loading="lazy" data-parallax="-12"></div>
+      <div class="visit-grid">
+        <div class="visit-card" data-reveal>
+          <p class="eyebrow">Come say hi</p>
+          <h2>The Art Room</h2>
+          <address>304 West Main Street<br>Sedalia, MO 65301</address>
+          <ul class="hours" id="hours">
+            <li data-days="3,4"><span>Wednesday–Thursday</span><span>By appointment</span></li>
+            <li data-days="5,6"><span>Friday–Saturday</span><span>12–6 pm</span></li>
+            <li data-days="0"><span>Sunday</span><span>1–5 pm</span></li>
+            <li data-days="1,2"><span>Monday–Tuesday</span><span>Closed</span></li>
+          </ul>
+          <p class="small">No appointment needed to paint during open hours. Classes and events are non-refundable, so please book only if you can make it.</p>
+          <div class="visit-actions">
+            <a class="btn btn-clay magnetic" href="https://maps.google.com/?q=304+West+Main+Street,+Sedalia,+MO+65301" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-line-dark magnetic" href="tel:+16608512392">Call (660) 851-2392</a>
+          </div>
+        </div>
+        <iframe class="map" data-reveal title="Map to 304 West Main Street, Sedalia, MO"
           src="https://maps.google.com/maps?q=304%20West%20Main%20Street%2C%20Sedalia%2C%20MO%2065301&z=16&output=embed"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
 
-    <section class="section faq">
-      <p class="eyebrow">FAQ</p>
-      <h2>Good questions</h2>
-      <details>
-        <summary>Do I need an appointment to come paint?</summary>
-        <p>No! Come paint any time during open hours. Wednesday and Thursday are by appointment.</p>
-      </details>
-      <details>
-        <summary>How much does it cost?</summary>
-        <p>Pieces start at $5. Most of the selection is in the $15–25 range.</p>
-      </details>
-      <details>
-        <summary>Can I host a party or event?</summary>
-        <p>Yes: birthdays, showers, team building, field trips and more. Email <a href="mailto:events@artroomusa.com">events@artroomusa.com</a> or message <a href="https://www.facebook.com/104953634825517" target="_blank" rel="noopener">The Art Room on Facebook</a>.</p>
-      </details>
-      <details>
-        <summary>Can I get a refund on a class?</summary>
-        <p>Classes, events and lessons are non-refundable unless management agrees otherwise.</p>
-      </details>
-      <details>
-        <summary>Do you buy ceramic slip molds?</summary>
-        <p>Yes, we're interested!</p>
-      </details>
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <p class="eyebrow" data-reveal>FAQ</p>
+      <h2 data-reveal>Good questions.</h2>
+      <div class="faq-list">
+        <details data-reveal>
+          <summary>Do I need an appointment to come paint?</summary>
+          <div class="faq-body"><p>No! Come paint any time during open hours. Wednesday and Thursday are by appointment.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>How much does it cost?</summary>
+          <div class="faq-body"><p>Pieces start at $5. Most of the selection is in the $15–25 range.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>Can I host a party or event?</summary>
+          <div class="faq-body"><p>Yes: birthdays, showers, team building, field trips and more. Email <a href="mailto:events@artroomusa.com">events@artroomusa.com</a> or message <a href="https://www.facebook.com/104953634825517" target="_blank" rel="noopener">The Art Room on Facebook</a>.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>Can I get a refund on a class?</summary>
+          <div class="faq-body"><p>Classes, events and lessons are non-refundable unless management agrees otherwise.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>Do you buy ceramic slip molds?</summary>
+          <div class="faq-body"><p>Yes, we're interested! Get in touch.</p></div>
+        </details>
+      </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <p class="eyebrow">Contact</p>
-      <h2>Questions, orders, or just a hello</h2>
-      <a class="email" href="mailto:thedepressedceramicist@gmail.com">thedepressedceramicist@gmail.com</a>
-      <p><a class="phone" href="tel:+16608512392">(660) 851-2392</a></p>
-      <div class="socials">
-        <a href="https://www.facebook.com/p/The-Depressed-Ceramicist-100092476583551/" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.instagram.com/thedepressedceramicist/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/104953634825517" target="_blank" rel="noopener">The Art Room</a>
-        <a href="https://www.instagram.com/art_room_usa" target="_blank" rel="noopener">@art_room_usa</a>
-        <a href="https://linktr.ee/thedepressedceramicist" target="_blank" rel="noopener">All links</a>
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <p class="eyebrow" data-reveal>Say hello</p>
+      <h2 class="big" data-reveal>Questions, orders,<br>or just a <em>hello</em>.</h2>
+      <a class="contact-email" href="mailto:thedepressedceramicist@gmail.com" data-reveal>thedepressedceramicist@gmail.com</a>
+      <div class="contact-links" data-reveal>
+        <a class="pill" href="tel:+16608512392">(660) 851-2392</a>
+        <a class="pill" href="https://www.facebook.com/p/The-Depressed-Ceramicist-100092476583551/" target="_blank" rel="noopener">Facebook</a>
+        <a class="pill" href="https://www.instagram.com/thedepressedceramicist/" target="_blank" rel="noopener">Instagram</a>
+        <a class="pill" href="https://www.facebook.com/104953634825517" target="_blank" rel="noopener">The Art Room</a>
+        <a class="pill" href="https://www.instagram.com/art_room_usa" target="_blank" rel="noopener">@art_room_usa</a>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
+    <img src="images/logo.svg" alt="" width="56" height="56">
     <p>© <span id="year">2026</span> The Depressed Ceramicist at The Art Room · 304 W Main St, Sedalia, MO</p>
-    <p class="muted">If you're having a hard time, you're not alone. In the US, call or text <a href="tel:988">988</a> any time.</p>
+    <p class="footer-note">If you're having a hard time, you're not alone. In the US, call or text <a href="tel:988">988</a> any time.</p>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lb-close" aria-label="Close">×</button>
+    <button class="lb-prev" aria-label="Previous photo">‹</button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+    <button class="lb-next" aria-label="Next photo">›</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="main.js" defer></script>
 </body>
 </html>

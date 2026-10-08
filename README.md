@@ -2,15 +2,15 @@
 
 Static site for The Depressed Ceramicist (Sedalia, MO). Plain HTML/CSS, hosted on GitHub Pages.
 
-## Adding photos
-Drop images into `images/` with these names. Any missing photo shows a colored placeholder.
+## Files
+- `index.html`: all page content (text, hours, links)
+- `styles.css`: design
+- `main.js`: animations (GSAP + Lenis from CDN), rain effect, open-now badge, photo viewer, mobile menu
+- `images/`: photos from The Depressed Ceramicist Facebook page and artroomusa.com
 
-| File | Where it shows |
-|---|---|
-| `piece-1.jpg` … `piece-6.jpg` | Gallery tiles (edit captions in `index.html`) |
-| `india.jpg` | Round photo in the About section |
+To change hours, edit the hours list in `index.html` **and** the `HOURS` object at the top of `main.js` (it drives the "Open now" badge).
 
-Square or 4:5 portrait photos work best. Keep each under ~500 KB.
+To add a gallery photo, put it in `images/` and copy one of the `<a class="g-item">` lines in the Art Room gallery.
 
 ## Deploying (GitHub Pages)
 1. Push this folder to a public GitHub repo.
